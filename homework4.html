@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="mvCanvas" width="600" height="600" style="border: 1px" solid #f1f1f1></canvas>
+<script >
+	var del = setInterval(move,50);
+	var x,y,a,b;
+	x = 0;
+	y = 0;
+	a = 0;
+	b = 0;
+	var check = true;
+	function move(){
+	var c=document.getElementById("mvCanvas");
+	var ctx=c.getContext("2d");
+	ctx.fillStyle = "red";
+	ctx.clearRect(a,b,30,30);
+	ctx.fillRect(x,y,30,30);
+	a=x;
+    b=y;
+	if(check){
+	x+=30;
+	y+=30;
+	}
+	else{
+	x-=30
+	y-=30
+}
+    if(x>=600){
+    	check = false;
+    }
+    else if(x<0){
+    	check = true;
+    }
+}
+</script>
+</body>
+</html>

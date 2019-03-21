@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="myData" value="6">
+<input type="number" id="myData2" value="3">
+<script>
+function add(){
+  var x,y;
+  x = parseFloat(document.getElementById("myData").value);
+  y = parseFloat(document.getElementById("myData2").value);
+  document.getElementById("result").innerHTML = x + y;
+}
+function sub(){
+  var x,y;
+  x = parseFloat(document.getElementById("myData").value);
+  y = parseFloat(document.getElementById("myData2").value);
+  document.getElementById("result").innerHTML = x - y;
+}
+function mul(){
+  var x,y;
+  x = parseFloat(document.getElementById("myData").value);
+  y = parseFloat(document.getElementById("myData2").value);
+  document.getElementById("result").innerHTML = x * y;
+}
+function div(){
+  var x,y;
+  x = parseFloat(document.getElementById("myData").value);
+  y = parseFloat(document.getElementById("myData2").value);
+  document.getElementById("result").innerHTML = x / y;
+}
+function clr(){
+	document.getElementById("myData").value = document.clear;
+	document.getElementById("myData2").value = document.clear;
+	document.getElementById("result").innerHTML="";
+}
+
+</script>
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">*</button>
+<button onclick="div()">/</button>
+<button onclick="clr()">clear</button>
+<p id ="result"></p>
+</body>
+</html>

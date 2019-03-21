@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="data" value="60">
+<script> 
+ function check() 
+ { 
+ var x= parseFloat(document.getElementById("data").value);
+ if(x>59)
+ { 
+  document.getElementById("result").innerHTML = "You're fucking genius!";
+ }
+ else
+ {
+  document.getElementById("result").innerHTML = "You're bad GUYS!";
+ } 
+}
+
+ </script> 
+<button onclick="check()">檢查</button>
+<p id = result></p>
+</body>
+</html>
